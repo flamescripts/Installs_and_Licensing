@@ -15,19 +15,19 @@ created on personal time to address specific customer requests and may not be ap
 - Caution is **strongly** advised as these has not been thoroughly tested.
 
 
-
+<br><br>
 ## Flame Keyring Popup
 **Potential fix for “Unable to access information in your keyring”**
 ![alt text](https://global.discourse-cdn.com/flex020/uploads/thedepartmentofexternalservices/original/2X/6/689ff113d0e77b3f1b1c16dc53868d717b4abb38.png)
 
-## Test Environment
+### Test Environment
 
 - Operating System: Rocky Linux 9.3
 - Flame Family: 2025
 - Auto-Login: Activated
  
 
-## Installation:
+### Installation:
 - Install seahorse using `dnf`.
   - This process included upgrading openldap, openldap-clients, openldap-devel and installing dependencies for openldap-compat.
 - The code block below should be appended to end of the user's local `~/.bash_profile`, if intending to be automated at login.
@@ -41,7 +41,7 @@ created on personal time to address specific customer requests and may not be ap
     unlock_keychain="PASSWORD"
     eval $(echo -n "${unlock_keychain}" | gnome-keyring-daemon --unlock)
 
-## Caveats:
+### Caveats:
 - Installing seahorse may not be neccessary.
 - This workaround does not remove the need to open a browswer session and Return to product.
 - While testing workaround, wait at least 10 seconds after login to launch Flame.
