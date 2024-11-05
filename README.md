@@ -38,4 +38,6 @@ Caution is **strongly** advised as these has not been thoroughly tested.
     unlock_keychain="PASSWORD"
     eval $(echo -n "${unlock_keychain}" | gnome-keyring-daemon --unlock)
 
+## Caveat:
+- I had previously installed seahorse via `dnf`.  This process included upgrading  openldap, openldap-clients, openldap-devel and installing dependencies for openldap-compat
 -------------
