@@ -10,9 +10,9 @@ the information provided. These workarounds have not been thoroughly tested and 
 created on personal time to address specific customer requests and may not be applicable to your workflow.
 
 **Use at your own risk.**
-These workarounds are intended for providing guidance only.<br>
-There is no support provided.<br>
-Caution is **strongly** advised as these has not been thoroughly tested.
+- These workarounds are intended for providing guidance only.<br>
+- There is no support provided.<br>
+- Caution is **strongly** advised as these has not been thoroughly tested.
 
 
 
@@ -28,7 +28,10 @@ Caution is **strongly** advised as these has not been thoroughly tested.
  
 
 ## Installation:
-- The code block itself should be appended to end of the user's local ~/.bash_profile, if intending to be automated at login.  Can also be placed into an external script.  
+- Install seahorse using `dnf`.
+  - This process included upgrading openldap, openldap-clients, openldap-devel and installing dependencies for openldap-compat.
+- The code block below should be appended to end of the user's local `~/.bash_profile`, if intending to be automated at login.
+  - Can also be placed into an external script.  
 
 **Note**: Change PASSWORD to your user password.
 
@@ -38,6 +41,11 @@ Caution is **strongly** advised as these has not been thoroughly tested.
     unlock_keychain="PASSWORD"
     eval $(echo -n "${unlock_keychain}" | gnome-keyring-daemon --unlock)
 
-## Caveat:
-- I had previously installed seahorse via `dnf`.  This process included upgrading  openldap, openldap-clients, openldap-devel and installing dependencies for openldap-compat
+## Caveats:
+- Installing seahorse may not be neccessary.
+- This workaround does not remove the need to open a browswer session and Return to product.
+- While testing workaround, wait at least 10 seconds after login to launch Flame.
+- The `sleep` commands can be experimented with or removed.
+
+
 -------------
