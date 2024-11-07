@@ -31,7 +31,7 @@ created on personal time to address specific customer requests and may not be ap
 - Install seahorse using `dnf`.
   - This process included upgrading openldap, openldap-clients, openldap-devel and installing dependencies for openldap-compat.
 - The code block below should be appended to end of the user's local `~/.bash_profile`, if intending to be automated at login.
-  - Can also be placed into an external script.  
+  - Can also be placed into the external script `unlock_keyring.sh`, which is provided in Alternate Testing section.  
 
 **Note**: Change PASSWORD to your user password.
 
@@ -46,6 +46,24 @@ created on personal time to address specific customer requests and may not be ap
 - This workaround does not remove the need to open a browswer session and Return to product.
 - While testing workaround, wait at least 10 seconds after login to launch Flame.
 - The `sleep` commands can be experimented with or removed.
+<br><br><br>
+### Alternate Testing:
+If there are issues, please validate that you are able to unlock your Login keychain by performing the following:
+- Pull up the Passwords and Keys app.
+- Select the `Login` key under **Password**
+- Right Click the `Login` key and and select **Lock** from the contextual menu.
+- Run the script `unlock_keyring.sh` to validate `Login` gets unlocked.
 
+unlock_keyring.sh contents:
 
--------------
+    #!/bin/bash
+    
+    killall gnome-keyring-daemon
+    unlock_keychain="PASSWORD"
+    sleep 2
+    eval $(echo -n "${unlock_keychain}" | gnome-keyring-daemon --unlock)
+
+**Note**: It may be necessary to close the Passwords and Keys app and relaunch to see the updated lock status.  Change PASSWORD to your user password.
+
+- If successful, your Passwords and Keys should unlock to see the AdskIdentityManager Safe Storage<br><br>
+![Passwords and Keys](https://help.autodesk.com/sfdcarticles/img/0EMKf000006pY07)
