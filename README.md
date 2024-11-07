@@ -36,8 +36,7 @@ This Python 3 script checks if a list of Fully Qualified Domain Names (FQDNs), A
 ### Installation:
 - Install seahorse using `dnf`.
   - This process included upgrading openldap, openldap-clients, openldap-devel and installing dependencies for openldap-compat.
-- The code block below should be appended to end of the user's local `~/.bash_profile`, if intending to be automated at login.
-  - Can also be placed into the external script `unlock_keyring.sh`, which is provided in Alternate Testing section.  
+- The code block below should be appended to end of the user's local start script, such as `~/.bash_profile`, if intending to be automated at login.  Can also be placed into the external script `unlock_keyring.sh` for manual execution, which is provided in the Alternate Testing section.  
 
 **Note**: Change PASSWORD to your user password.
 
