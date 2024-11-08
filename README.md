@@ -24,7 +24,7 @@ This Python 3 script checks if a list of Fully Qualified Domain Names (FQDNs), A
 <br><br>
 ## Flame Keyring Popup
 **Potential fix for “Unable to access information in your keyring”**
-![alt text](https://global.discourse-cdn.com/flex020/uploads/thedepartmentofexternalservices/original/2X/6/689ff113d0e77b3f1b1c16dc53868d717b4abb38.png)
+<img src="https://global.discourse-cdn.com/flex020/uploads/thedepartmentofexternalservices/original/2X/6/689ff113d0e77b3f1b1c16dc53868d717b4abb38.png" width="600">
 
 ### Test Environment
 
